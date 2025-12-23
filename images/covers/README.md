@@ -50,9 +50,21 @@ Add your cover images to this folder with the following filenames:
 - Recommended size: 600x600px minimum (square aspect ratio)
 - File size: Keep under 500KB for optimal web performance
 
+## Download Status
+
+The `download-placeholders.sh` script has been updated with real image URLs for:
+- ✓ All 4 album covers (Apple Music, Bandcamp, official stores)
+- ✓ All 3 comic book covers (DC Comics, IDW Publishing)
+- ⚠ Movies & TV still use placeholders (automated downloads blocked)
+
+For the remaining placeholders (Wake Up Dead Man, Superman, Smiling Friends), you can:
+1. Visit IMDb or official movie/TV sites
+2. Right-click on the poster/promotional image and save it
+3. Replace the placeholder files with the downloaded images
+
 ## Tips for Finding Images
 
 - **Albums**: Search on Spotify or Apple Music, then screenshot/download the cover art
 - **Movies/TV**: Check IMDb, official websites, or Wikipedia
-- **Comics**: Visit publisher websites (DC Comics, Image Comics) or retail sites like Comixology
+- **Comics**: Visit publisher websites (DC Comics, IDW Publishing) or retail sites like Comixology
 - Always respect copyright - only use images you have permission to use
