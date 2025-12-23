@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>My Favorite Albums of 2025</title>
-    <meta name="title" content="My Favorite Albums of 2025">
-    <meta name="description" content="From Lord Huron's cosmic folk to Rosalía's experimental flamenco—eight albums that defined my year in music.">
+    <title>My Top Picks of 2025</title>
+    <meta name="title" content="My Top Picks of 2025">
+    <meta name="description" content="From music and movies to TV and comics—the media that defined my year in 2025.">
     
     <!-- Open Graph / Facebook / Slack / Discord -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourdomain.com/albums-2025">
-    <meta property="og:title" content="My Favorite Albums of 2025">
-    <meta property="og:description" content="From Lord Huron's cosmic folk to Rosalía's experimental flamenco—eight albums that defined my year in music.">
-    <meta property="og:image" content="https://yourdomain.com/albums-2025-preview.jpg">
+    <meta property="og:url" content="https://yourdomain.com/top-picks-2025">
+    <meta property="og:title" content="My Top Picks of 2025">
+    <meta property="og:description" content="From music and movies to TV and comics—the media that defined my year in 2025.">
+    <meta property="og:image" content="https://yourdomain.com/top-picks-2025-preview.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    
+
     <!-- Twitter / X / Bluesky -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://yourdomain.com/albums-2025">
-    <meta property="twitter:title" content="My Favorite Albums of 2025">
-    <meta property="twitter:description" content="From Lord Huron's cosmic folk to Rosalía's experimental flamenco—eight albums that defined my year in music.">
-    <meta property="twitter:image" content="https://yourdomain.com/albums-2025-preview.jpg">
+    <meta property="twitter:url" content="https://yourdomain.com/top-picks-2025">
+    <meta property="twitter:title" content="My Top Picks of 2025">
+    <meta property="twitter:description" content="From music and movies to TV and comics—the media that defined my year in 2025.">
+    <meta property="twitter:image" content="https://yourdomain.com/top-picks-2025-preview.jpg">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -129,14 +129,14 @@
             }
         }
         
-        .albums-grid {
+        .media-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 2.5rem;
             margin-bottom: 5rem;
         }
-        
-        .album {
+
+        .media-item {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 255, 255, 0.08);
             padding: 0;
@@ -147,17 +147,20 @@
             display: flex;
             flex-direction: column;
         }
-        
-        .album:nth-child(1) { animation-delay: 0.1s; }
-        .album:nth-child(2) { animation-delay: 0.15s; }
-        .album:nth-child(3) { animation-delay: 0.2s; }
-        .album:nth-child(4) { animation-delay: 0.25s; }
-        .album:nth-child(5) { animation-delay: 0.3s; }
-        .album:nth-child(6) { animation-delay: 0.35s; }
-        .album:nth-child(7) { animation-delay: 0.4s; }
-        .album:nth-child(8) { animation-delay: 0.45s; }
-        
-        .album::before {
+
+        .media-item:nth-child(1) { animation-delay: 0.1s; }
+        .media-item:nth-child(2) { animation-delay: 0.15s; }
+        .media-item:nth-child(3) { animation-delay: 0.2s; }
+        .media-item:nth-child(4) { animation-delay: 0.25s; }
+        .media-item:nth-child(5) { animation-delay: 0.3s; }
+        .media-item:nth-child(6) { animation-delay: 0.35s; }
+        .media-item:nth-child(7) { animation-delay: 0.4s; }
+        .media-item:nth-child(8) { animation-delay: 0.45s; }
+        .media-item:nth-child(9) { animation-delay: 0.5s; }
+        .media-item:nth-child(10) { animation-delay: 0.55s; }
+        .media-item:nth-child(11) { animation-delay: 0.6s; }
+
+        .media-item::before {
             content: '';
             position: absolute;
             top: 0;
@@ -170,39 +173,39 @@
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             z-index: 1;
         }
-        
-        .album:hover {
+
+        .media-item:hover {
             background: rgba(255, 255, 255, 0.05);
             border-color: rgba(212, 20, 90, 0.3);
             transform: translateY(-4px);
         }
-        
-        .album:hover::before {
+
+        .media-item:hover::before {
             transform: scaleX(1);
         }
-        
-        .album-cover {
+
+        .media-cover {
             width: 100%;
             aspect-ratio: 1;
             background: linear-gradient(135deg, rgba(212, 20, 90, 0.2) 0%, rgba(139, 125, 107, 0.2) 100%);
             position: relative;
             overflow: hidden;
         }
-        
-        .album-cover img {
+
+        .media-cover img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        
-        .album:hover .album-cover img {
+
+        .media-item:hover .media-cover img {
             transform: scale(1.05);
         }
-        
-        .album-cover::before {
-            content: 'ALBUM ART';
+
+        .media-cover::before {
+            content: 'MEDIA';
             position: absolute;
             top: 50%;
             left: 50%;
@@ -212,8 +215,8 @@
             color: rgba(248, 245, 240, 0.3);
             font-weight: 300;
         }
-        
-        .album-info {
+
+        .media-info {
             padding: 1.5rem;
             flex: 1;
             display: flex;
@@ -230,14 +233,14 @@
             opacity: 0.3;
         }
         
-        .album-title {
+        .media-title {
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
             line-height: 1.2;
         }
-        
+
         .artist {
             font-size: 1rem;
             color: var(--muted);
@@ -245,7 +248,20 @@
             font-weight: 300;
             letter-spacing: 0.05em;
         }
-        
+
+        .media-type {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            background: rgba(139, 125, 107, 0.2);
+            border: 1px solid rgba(139, 125, 107, 0.4);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.5rem;
+            color: var(--muted);
+            font-weight: 400;
+        }
+
         .genre {
             display: inline-block;
             padding: 0.25rem 0.75rem;
@@ -293,13 +309,13 @@
             .container {
                 padding: 2rem 1.5rem;
             }
-            
+
             header {
                 margin-bottom: 3rem;
                 padding-bottom: 2rem;
             }
-            
-            .albums-grid {
+
+            .media-grid {
                 gap: 1.5rem;
             }
         }
@@ -311,115 +327,165 @@
     <div class="container">
         <header>
             <h1 class="year">2025</h1>
-            <p class="subtitle">Favorite Albums</p>
+            <p class="subtitle">Top Picks</p>
         </header>
-        
+
         <div class="intro">
-            Eight albums that shaped my year, spanning indie folk epics, experimental flamenco, live cumbia energy, and honest country storytelling. Each one found its way into my rotation for different reasons—some for their ambition, others for their intimacy, all for their authenticity.
+            The albums, movies, TV shows, and comics that shaped my year. From indie folk epics and noir mysteries to animated chaos and bold superhero reimaginings—each one captivated me for different reasons.
         </div>
         
-        <div class="albums-grid">
-            <div class="album">
-                <div class="album-cover">
+        <div class="media-grid">
+            <div class="media-item">
+                <div class="media-cover">
                     <img src="https://via.placeholder.com/400x400/8b7d6b/f8f5f0?text=The+Cosmic+Selector" alt="The Cosmic Selector album cover">
                 </div>
-                <div class="album-info">
+                <div class="media-info">
                     <div class="rank">01</div>
-                    <h2 class="album-title">The Cosmic Selector</h2>
+                    <span class="media-type">Album</span>
+                    <h2 class="media-title">The Cosmic Selector</h2>
                     <p class="artist">Lord Huron</p>
                     <p class="note">Epic storytelling meets cinematic folk. Another masterclass in world-building through music.</p>
                     <span class="genre">Indie Folk / Americana</span>
                 </div>
             </div>
             
-            <div class="album">
-                <div class="album-cover">
+            <div class="media-item">
+                <div class="media-cover">
                     <img src="https://via.placeholder.com/400x400/8b7d6b/f8f5f0?text=Adagio" alt="Adagio album cover">
                 </div>
-                <div class="album-info">
+                <div class="media-info">
                     <div class="rank">02</div>
-                    <h2 class="album-title">Adagio</h2>
+                    <span class="media-type">Album</span>
+                    <h2 class="media-title">Adagio</h2>
                     <p class="artist">Stella</p>
                     <p class="note">Intimate and ethereal. Each song unfolds like a quiet revelation.</p>
                     <span class="genre">Indie / Dream Pop</span>
                 </div>
             </div>
             
-            <div class="album">
-                <div class="album-cover">
+            <div class="media-item">
+                <div class="media-cover">
                     <img src="https://via.placeholder.com/400x400/8b7d6b/f8f5f0?text=Live+at+Thalia+Hall" alt="Live at Thalia Hall album cover">
                 </div>
-                <div class="album-info">
+                <div class="media-info">
                     <div class="rank">03</div>
-                    <h2 class="album-title">Live at Thalia Hall</h2>
+                    <span class="media-type">Album</span>
+                    <h2 class="media-title">Live at Thalia Hall</h2>
                     <p class="artist">LA LOM</p>
                     <p class="note">Electric cumbia energy captured perfectly. This recording radiates pure joy and movement.</p>
                     <span class="genre">Cumbia / Latin</span>
                 </div>
             </div>
-            
-            <div class="album">
-                <div class="album-cover">
+
+            <div class="media-item">
+                <div class="media-cover">
                     <img src="https://via.placeholder.com/400x400/8b7d6b/f8f5f0?text=The+Clearing" alt="The Clearing album cover">
                 </div>
-                <div class="album-info">
+                <div class="media-info">
                     <div class="rank">04</div>
-                    <h2 class="album-title">The Clearing</h2>
+                    <span class="media-type">Album</span>
+                    <h2 class="media-title">The Clearing</h2>
                     <p class="artist">Wolf Alice</p>
                     <p class="note">Raw emotion and sonic experimentation. They continue to push boundaries while staying true to themselves.</p>
                     <span class="genre">Alternative Rock / Indie</span>
                 </div>
             </div>
-            
-            <div class="album">
-                <div class="album-cover">
+
+            <div class="media-item">
+                <div class="media-cover">
                     <img src="https://via.placeholder.com/400x400/8b7d6b/f8f5f0?text=LUX" alt="LUX album cover">
                 </div>
-                <div class="album-info">
+                <div class="media-info">
                     <div class="rank">05</div>
-                    <h2 class="album-title">LUX</h2>
+                    <span class="media-type">Album</span>
+                    <h2 class="media-title">LUX</h2>
                     <p class="artist">Rosalía</p>
                     <p class="note">Bold, innovative, and utterly captivating. She transforms flamenco traditions into something entirely new.</p>
                     <span class="genre">Flamenco / Experimental Pop</span>
                 </div>
             </div>
-            
-            <div class="album">
-                <div class="album-cover">
+
+            <div class="media-item">
+                <div class="media-cover">
                     <img src="https://via.placeholder.com/400x400/8b7d6b/f8f5f0?text=Hard-Headed+Woman" alt="Hard-Headed Woman album cover">
                 </div>
-                <div class="album-info">
+                <div class="media-info">
                     <div class="rank">06</div>
-                    <h2 class="album-title">Hard-Headed Woman</h2>
+                    <span class="media-type">Album</span>
+                    <h2 class="media-title">Hard-Headed Woman</h2>
                     <p class="artist">Margo Price</p>
                     <p class="note">Honest country music with a sharp edge. Her songwriting cuts straight to the truth.</p>
                     <span class="genre">Country / Americana</span>
                 </div>
             </div>
-            
-            <div class="album">
-                <div class="album-cover">
+
+            <div class="media-item">
+                <div class="media-cover">
                     <img src="https://via.placeholder.com/400x400/8b7d6b/f8f5f0?text=Lonesome+Drifter" alt="Lonesome Drifter album cover">
                 </div>
-                <div class="album-info">
+                <div class="media-info">
                     <div class="rank">07</div>
-                    <h2 class="album-title">Lonesome Drifter</h2>
+                    <span class="media-type">Album</span>
+                    <h2 class="media-title">Lonesome Drifter</h2>
                     <p class="artist">Charley Crockett</p>
                     <p class="note">Timeless honky-tonk with soul. Crockett channels classic country while making it entirely his own.</p>
                     <span class="genre">Country / Honky-Tonk</span>
                 </div>
             </div>
-            
-            <div class="album">
-                <div class="album-cover">
+
+            <div class="media-item">
+                <div class="media-cover">
                     <img src="https://via.placeholder.com/400x400/8b7d6b/f8f5f0?text=Dollar+a+Day" alt="Dollar a Day album cover">
                 </div>
-                <div class="album-info">
+                <div class="media-info">
                     <div class="rank">08</div>
-                    <h2 class="album-title">Dollar a Day</h2>
+                    <span class="media-type">Album</span>
+                    <h2 class="media-title">Dollar a Day</h2>
                     <p class="artist">Charley Crockett</p>
                     <p class="note">Another stellar release from Crockett this year. The man's prolific output never sacrifices quality.</p>
                     <span class="genre">Country / Americana</span>
+                </div>
+            </div>
+
+            <div class="media-item">
+                <div class="media-cover">
+                    <img src="https://via.placeholder.com/400x400/8b7d6b/f8f5f0?text=Wake+Up+Dead+Man" alt="Wake Up Dead Man movie poster">
+                </div>
+                <div class="media-info">
+                    <div class="rank">09</div>
+                    <span class="media-type">Movie</span>
+                    <h2 class="media-title">Wake Up Dead Man</h2>
+                    <p class="artist">Rian Johnson</p>
+                    <p class="note">Another brilliant Benoit Blanc mystery. Johnson's craftsmanship and wit shine through every frame.</p>
+                    <span class="genre">Mystery / Crime</span>
+                </div>
+            </div>
+
+            <div class="media-item">
+                <div class="media-cover">
+                    <img src="https://via.placeholder.com/400x400/8b7d6b/f8f5f0?text=Smiling+Friends" alt="Smiling Friends show art">
+                </div>
+                <div class="media-info">
+                    <div class="rank">10</div>
+                    <span class="media-type">TV Series</span>
+                    <h2 class="media-title">Smiling Friends</h2>
+                    <p class="artist">Zach Hadel & Michael Cusack</p>
+                    <p class="note">Absurdist comedy at its finest. Consistently hilarious and surprisingly heartfelt.</p>
+                    <span class="genre">Animation / Comedy</span>
+                </div>
+            </div>
+
+            <div class="media-item">
+                <div class="media-cover">
+                    <img src="https://via.placeholder.com/400x400/8b7d6b/f8f5f0?text=Absolute+Batman" alt="Absolute Batman comic cover">
+                </div>
+                <div class="media-info">
+                    <div class="rank">11</div>
+                    <span class="media-type">Comic Book</span>
+                    <h2 class="media-title">Absolute Batman</h2>
+                    <p class="artist">Scott Snyder & Nick Dragotta</p>
+                    <p class="note">A bold reimagining that respects the character while taking daring new directions. Visually stunning.</p>
+                    <span class="genre">Superhero / Action</span>
                 </div>
             </div>
         </div>
